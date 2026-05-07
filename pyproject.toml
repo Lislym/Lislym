@@ -31,6 +31,8 @@ dev = [
 lislym = "lislym.main:main"
 lislym-calib-intrinsic = "lislym.tools.calibrate_intrinsic:main"
 lislym-calib-extrinsic = "lislym.tools.calibrate_extrinsic:main"
+lislym-print-charuco = "lislym.tools.generate_charuco:main"
+lislym-print-floor-aruco = "lislym.tools.generate_floor_aruco:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/lislym"]
