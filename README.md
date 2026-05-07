@@ -4,6 +4,8 @@ Multi-camera color-marker full-body tracker for VRChat — a Vive Tracker / Slim
 alternative built around 3 markers (hip + both ankles), an HMD, and two
 controllers.
 
+> 日本語版は [README.ja.md](./README.ja.md) を参照してください。
+
 The minimum viable system runs on three cameras, three colored spheres,
 ChArUco-based calibration that you can put away after setup, and a Windows PC.
 Target accuracy: 10–15 mm RMSE on hip / ankle positions, comparable to a Vive
