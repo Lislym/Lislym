@@ -126,8 +126,13 @@ Webcam, or any other 3-camera rig):
 
 ## Marker-method alternatives
 
-A separate analysis covers ArUco-band and colored-paper alternatives to
-the colored-sphere markers. See [`docs/marker_alternatives.md`](docs/marker_alternatives.md).
-TL;DR: ArUco multi-marker bands are a strong v2 candidate (eliminate
-identity confusion, give 6-DoF per body part); colored paper is not
-worth implementing.
+A separate analysis covers alternatives to the all-colored-sphere setup.
+See [`docs/marker_alternatives.md`](docs/marker_alternatives.md). TL;DR:
+
+- **Hybrid (hip = ArUco, ankles = color spheres)** — strongly recommended
+  v1.5. Solves the hip-yaw weakness in the current plan with ~4–5 days
+  of work. Implement in parallel with v1 hardware verification.
+- **Full ArUco multi-marker bands** — v2 candidate. Eliminates identity
+  confusion entirely, gives 6-DoF per body part. Pursue only if v1.5
+  still has issues.
+- **Colored paper bands** — not worth implementing.
