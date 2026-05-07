@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Captured data and calibration artifacts (keep schema, not contents)
+calib/intrinsic_*.json
+calib/extrinsic_session_*.json
+calib/personal_*.json
+captures/
+recordings/
+*.mp4
+*.mkv
+*.avi
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

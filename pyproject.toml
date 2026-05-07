@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lislym"
+version = "0.0.1"
+description = "3-marker multi-camera MediaPipe full-body tracker for VRChat (Vive Tracker alternative)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Lislym contributors" }]
+dependencies = [
+    "numpy>=1.24",
+    "opencv-contrib-python>=4.9",
+    "scipy>=1.11",
+    "mediapipe>=0.10",
+    "python-osc>=1.8",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.5",
+    "mypy>=1.10",
+]
+
+[project.scripts]
+lislym = "lislym.main:main"
+lislym-calib-intrinsic = "lislym.tools.calibrate_intrinsic:main"
+lislym-calib-extrinsic = "lislym.tools.calibrate_extrinsic:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lislym"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_ignores = true
+ignore_missing_imports = true
