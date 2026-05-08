@@ -136,3 +136,17 @@ See [`docs/marker_alternatives.md`](docs/marker_alternatives.md). TL;DR:
   confusion entirely, gives 6-DoF per body part. Pursue only if v1.5
   still has issues.
 - **Colored paper bands** — not worth implementing.
+
+### Recommended marker specs
+
+Full reasoning in `docs/marker_alternatives.md` §2.8–2.10.
+
+| Part | Recommendation |
+|---|---|
+| Hip ArUco | **8×8 cm**, DICT_4X4_50, **1 marker** on belt front |
+| Floor ArUco | 15×15 cm, DICT_4X4_50, taped once |
+| Ankle balls | φ5 cm, **3 per ankle** placed **front / outer / back** (inner side is occluded by the contralateral leg) |
+
+The hip needs only one marker because the user faces the play area in
+VRChat and the 4-camera ring guarantees at least one front view; rare
+back-facing moments are covered by EKF prediction.
